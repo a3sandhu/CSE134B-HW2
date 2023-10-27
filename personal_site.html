@@ -110,38 +110,44 @@
     <video controls>
       <source src="bread.mp4" type="video/mp4" />
     </video>
+    <iframe src="https://www.youtube.com/" frameborder="0"> title="YouTube"</iframe>
     <br />
+
     <form>
       <fieldset>
-        <legend>Connect with us!</legend>
-        <label>Select your expertise:</label>
-        <input type="radio" id="beginner" name="expertise" />
-        <label for="beginner">Beginner</label>
-        <input type="radio" id="intermediate" name="expertise" />
-        <label for="intermediate">Intermediate</label>
-        <input type="radio" id="advanced" name="expertise" />
-        <label for="advanced">Advanced</label>
+        <legend>Thank you for visiting!</legend>
+        <label>Will you hire me?:</label>
+        <input type="radio" id="yes" name="job" />
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="job" />
+        <label for="no">No</label>
+        <input type="radio" id="maybe" name="job" />
+        <label for="maybe">Maybe</label>
         <br />
-        <label for="country">Select your country:</label>
-        <select id="country">
-          <optgroup label="North America">
-            <option value="canada">Canada</option>
-            <option value="us">US</option>
-            <option value="mexico">Mexico</option>
+        <label for="aliens">What series did you favorite Ben 10 alien first appear?:</label>
+        <select id="aliens">
+          <optgroup label="Ben 10 classic">
+            <option value="xlr8">XLR8</option>
+            <option value="diamondhead">Diamond Head</option>
+            <option value="ghostfreak">Ghost Freak</option>
           </optgroup>
-          <optgroup label="Asia">
-            <option value="russia">Russia</option>
-            <option value="china">China</option>
+          <optgroup label="UAF">
+            <option value="bigchill">Big Chill</option>
+            <option value="echoecho">Echo Echo</option>
+            <option value="alienx">Alien X</option>
+          </optgroup>
+          <optgroup label="Reboot">
+            <option value="denied">I didn't watch the Reboot</option>
           </optgroup>
         </select>
         <br />
-        <label for="continent">Select your continent:</label>
-        <datalist id="continents">
-          <option value="Africa"></option>
-          <option value="North America"></option>
-          <option value="South America"></option>
+        <label for="atla">What's your Avatar:TLA favorite quote?:</label>
+        <datalist id="quotes">
+          <option value="This tea is nothing more than hot leaf juice!"></option>
+          <option value="That's rough buddy."></option>
+          <option value="Hey! We’re in enemy territory. Those are enemy birds."></option>
         </datalist>
-        <input list="continents" id="continent" />
+        <input list="quotes" id="atla" />
 
         <br />
         <label for="sample-text-area">Add any comments:</label>
@@ -152,8 +158,8 @@
     </form>
     <br />
     <details>
-      <summary>Hello!</summary>
-      If this is your first time here, please like and share!
+      <summary>This is a drop down</summary>
+      Boo!
     </details>
     <br />
     <table>
