@@ -21,7 +21,7 @@ body {
 
 p {
     font-size: 1.5rem;
-    color: paleturquoise
+    color: pink
     color: var(--color-pink-rgb);
     &:hover {
         background-color:lightgoldenrodyellow;
