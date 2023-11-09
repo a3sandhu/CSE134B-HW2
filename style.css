@@ -7,6 +7,6 @@
     --font: "Times New Roman", "Arial", "Helvetica", sans-serif;
 }
 body {
-    border: 1rem solid black;
+    border: 1rem solid color-pink-rgb;
     padding: 1%;
 }
