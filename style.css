@@ -30,6 +30,8 @@ p {
 }
 
 article:has(ol) {
+    color: pink
+    color: var(--color-pink-rgb);
     border: 2px inset blue;
 }
 
