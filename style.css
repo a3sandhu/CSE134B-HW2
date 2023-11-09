@@ -1,0 +1,12 @@
+:root {
+    --color-name:red;
+    --color-hex: #ffffff;
+    --color-pink-rgb: rgb(224, 74, 212);
+    --color-pink-rgb-opaque: rgba(224, 74, 212, 0.5);
+
+    --font: "Times New Roman", "Arial", "Helvetica", sans-serif;
+}
+body {
+    border: 1rem solid black;
+    padding: 1%;
+}
