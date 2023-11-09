@@ -7,14 +7,35 @@
     --font: "Times New Roman", "Arial", "Helvetica", sans-serif;
 }
 body {
+    border: 2rem dashed pink;
     border: 1rem solid var(--color-pink-rgb);
     padding: 1%;
 }
 
 p {
     font-size: 1.5rem;
+    color: paleturquoise
     color: var(--color-pink-rgb);
     &:hover {
+        background-color:lightgoldenrodyellow;
         background-color:var(--color-green-rgb-opaque);
     }
 }
+
+article:has(ol) {
+    border: 2px inset blue;
+}
+
+@keyframes color-swap {
+    from {background-color: red;}
+    to {background-color: blue;}
+  }
+  
+  /* The element to apply the animation to */
+  h1 {
+    /*width: 100px;
+    height: 100px;*/
+    background-color: red;
+    animation-name: color-swap;
+    animation-duration: 4s;
+  }
