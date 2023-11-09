@@ -50,7 +50,8 @@ article:has(ol) {
 
   .alter-css {
     display: grid;
-    grid-template: auto 1fr auto / auto 1fr auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     height: 100dvh;
     gap: 0.3rem;
   }
