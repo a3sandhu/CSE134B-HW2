@@ -2,11 +2,19 @@
     --color-name:red;
     --color-hex: #ffffff;
     --color-pink-rgb: rgb(224, 74, 212);
-    --color-pink-rgb-opaque: rgba(224, 74, 212, 0.5);
+    --color-green-rgb-opaque: rgba(28, 197, 98, 0.5);
 
     --font: "Times New Roman", "Arial", "Helvetica", sans-serif;
 }
 body {
     border: 1rem solid var(--color-pink-rgb);
     padding: 1%;
+}
+
+p {
+    font-size: 1.5rem;
+    color: var(--color-pink-rgb);
+    &:hover {
+        background-color:var(--color-green-rgb-opaque);
+    }
 }
