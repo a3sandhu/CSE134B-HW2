@@ -55,3 +55,16 @@ article:has(ol) {
     height: 100dvh;
     gap: 0.3rem;
   }
+
+  @media screen and (max-width: 640px) {
+    nav:first-child {
+      visibility: visible;
+    }
+    nav > * + * {
+      visibility: hidden;
+    }
+  
+    main {
+      grid-column: 1 / 4;
+    }
+  }
