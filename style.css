@@ -6,6 +6,13 @@
 
     --font: "Times New Roman", "Arial", "Helvetica", sans-serif;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
     border: 2rem dashed pink;
     border: 1rem solid var(--color-pink-rgb);
@@ -37,5 +44,13 @@ article:has(ol) {
     height: 100px;*/
     background-color: red;
     animation-name: color-swap;
-    animation-duration: 4s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  .alter-css {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+    height: 100dvh;
+    gap: 0.3rem;
   }
