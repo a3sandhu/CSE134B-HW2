@@ -65,6 +65,8 @@ article:has(ol) {
 
     display: flex;
 
+    justify-content: space-between;
+
     justify-content: end;
   }
 
@@ -81,6 +83,7 @@ article:has(ol) {
         border: 1px solid blue;
 
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: column;
 
