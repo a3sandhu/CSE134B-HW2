@@ -30,6 +30,9 @@ p {
     }
 }
 
+section {
+    background-color: color-mix(in srgb, #34c9eb 25%, white);
+}
 article:has(ol) {
     border: 2px inset blue;
 }
