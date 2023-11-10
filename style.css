@@ -66,7 +66,9 @@ article:has(ol) {
 
   /*max width is like <=*/
   @media screen and (max-width: 300px) {
-
+    .container {
+        flex-direction: column;
+    }
   }
 
   @media screen and (min-width: 900px) {
