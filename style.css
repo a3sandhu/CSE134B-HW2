@@ -4,7 +4,7 @@
     --color-pink-rgb: rgb(224, 74, 212);
     --color-green-rgb-opaque: rgba(28, 197, 98, 0.5);
 
-    --font: "Times New Roman", "Arial", "Helvetica", sans-serif;
+    --font: "Times New Roman", Arial, Helvetica, sans-serif;
 }
 
 *,
@@ -48,10 +48,27 @@ article:has(ol) {
     animation-iteration-count: infinite;
   }
 
-  .alter-css {
+  /*.alter-css {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     height: 100dvh;
     gap: 0.3rem;
+  }*/
+
+  .container {
+    border: 1px solid black;
+
+    display: flex;
+
+    justify-content: end;
+  }
+
+  /*max width is like <=*/
+  @media screen and (max-width: 300px) {
+
+  }
+
+  @media screen and (min-width: 900px) {
+
   }
