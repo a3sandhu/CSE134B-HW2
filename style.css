@@ -80,13 +80,7 @@ article:has(ol) {
   /*max width is like <=*/
   @media screen and (max-width: 300px) {
     .container {
-        border: 1px solid blue;
-
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        flex-direction: column;
-
+        border: 1px solid lime;
         gap: 2rem
     }
   }
