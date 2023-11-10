@@ -21,7 +21,7 @@ body {
 
 p {
     font-size: 1.5rem;
-    font-family: var(--font)
+    font-family: var(--font);
     color: pink;
     color: var(--color-pink-rgb);
     &:hover {
@@ -80,7 +80,13 @@ article:has(ol) {
   /*max width is like <=*/
   @media screen and (max-width: 300px) {
     .container {
-        border: 1px solid lime;
+        border: 1px solid blue;
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+
         gap: 2rem
     }
   }
