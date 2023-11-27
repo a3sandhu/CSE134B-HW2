@@ -60,6 +60,7 @@ article:has(ol) {
     gap: 0.3rem;
   }*/
 
+  /*
   .container {
     border: 1px solid black;
 
@@ -70,14 +71,16 @@ article:has(ol) {
     justify-content: end;
   }
 
+  
   .top-nav {
     display: flex;
 
     align-items: center;
     gap: 2rem;
-  }
+  }*/
 
   /*max width is like <=*/
+  /*
   @media screen and (max-width: 300px) {
     .container {
         border: 1px solid blue;
@@ -93,4 +96,4 @@ article:has(ol) {
 
   @media screen and (min-width: 700px) {
 
-  }
+  }*/
