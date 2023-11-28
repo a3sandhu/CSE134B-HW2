@@ -63,12 +63,20 @@ article:has(ol) {
       flex-direction: column;
       background-color: teal;
   }
-  
+
   input:user-invalid {
     border: 2px solid red;
   }
   
   input:user-invalid + span::before {
+    content: "✖";
+    color: red;
+  }
+  textarea:user-invalid {
+    border: 2px solid red;
+  }
+  
+  textarea:user-invalid + span::before {
     content: "✖";
     color: red;
   }
