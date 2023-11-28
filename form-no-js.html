@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Homework 4 Form">
+    <meta name="keywords" content="HTML">
+
+    <link rel="stylesheet" href = style.css />
+    <title>HW4 Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Flexbox</h1>
+    <div class="formcontainer">
+        <form action="https://httpbin.org/post" method = "POST">
+      
+          <label for="name">Full Name (required)</label>
+          <input type="text" id="name" name="fullname" placeholder="Your name.." required>
+  
+      
+          <label for="email">Email Address (required)</label>
+          <input type=“email” id="email" name="emailaddress" placeholder="email@example.com" required>
+      
+          <label for="comments">Comments (required)</label>
+          <textarea id="comments" name="comments" placeholder="Additional Comments..." 
+          minlength = "2" maxlength = "150" required></textarea>
+  
+          <input type="hidden" id= "bot" name="possible_bot" value = true>
+  
+          <output class="error-message" id = "error_m" for = "name email comments"></output>
+          <output class="info-message" id = "info_m" for = "name email comments"></output>
+      
+          <input type="submit" value="Submit">
+  
+        </form>
+      </div>
+  </body>
+</html>

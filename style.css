@@ -63,7 +63,15 @@ article:has(ol) {
       flex-direction: column;
       background-color: teal;
   }
-
+  
+  input:user-invalid {
+    border: 2px solid red;
+  }
+  
+  input:user-invalid + span::before {
+    content: "✖";
+    color: red;
+  }
   /*.alter-css {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
