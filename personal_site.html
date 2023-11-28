@@ -211,6 +211,7 @@
     
         <label for="name">Full Name (required)</label>
         <input type="text" id="name" name="fullname" placeholder="Your name.." required>
+
     
         <label for="email">Email Address (required)</label>
         <input type="text" id="email" name="emailaddress" placeholder="email@example.com" required>
@@ -219,9 +220,12 @@
         <textarea id="comments" name="comments" placeholder="Additional Comments..." required></textarea>
 
         <input type="hidden" id= "bot" name="possible_bot" value = true>
+
+        <output class="error-message" id = "error_m" for = "name email comments"></output>
+        <output class="info-message" id = "info_m" for = "name email comments"></output>
     
         <input type="submit" value="Submit">
-    
+
       </form>
     </div>
 
