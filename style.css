@@ -31,10 +31,10 @@ p {
 }
 
 section {
-    background-color: color-mix(in srgb, #34c9eb 25%, white);
+    background-color: color-mix(in srgb, #060606 25%, white);
 }
 article:has(ol) {
-    border: 2px inset gray;
+    border: 2px inset blue;
 }
 
 @keyframes color-swap {
