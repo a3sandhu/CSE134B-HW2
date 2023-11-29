@@ -85,6 +85,8 @@ article:has(ol) {
     background-color: black;
     color: white;
   }
+
+  
   /*.alter-css {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
