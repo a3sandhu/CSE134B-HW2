@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const textFields = document.querySelectorAll('input[type="text"], input[type="email"], textarea');
+    const textFields = document.querySelectorAll('input[type="text"], textarea');
 
     textFields.forEach(function (field) {
         field.addEventListener('input', function (event) {
             const inputValue = event.target.value;
-            const pattern = /^[a-zA-Z0-9@.]+$/; // Modify the pattern as needed
+            const pattern = [a-zA-Z0-9]; 
 
             if (!pattern.test(inputValue)) {
                 flashField(field);
@@ -30,13 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         charCountElement.textContent = remainingChars;
 
-        // Update style based on remaining characters
-        if (remainingChars <= 20 && remainingChars > 10) {
+        if (remainingChars > 80) {
             commentsInfo.classList.remove('error');
             commentsInfo.classList.add('warn');
-        } else if (remainingChars <= 10) {
-            commentsInfo.classList.remove('warn');
-            commentsInfo.classList.add('error');
         } else {
             commentsInfo.classList.remove('warn', 'error');
         }
@@ -44,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function flashField(field) {
         field.style.transition = 'background-color 0.3s ease';
-        field.style.backgroundColor = '#FFD6D6'; // Change to your preferred flash color
+        field.style.backgroundColor = '#FFD6D6'; 
         setTimeout(function () {
             field.style.backgroundColor = '';
         }, 300);
