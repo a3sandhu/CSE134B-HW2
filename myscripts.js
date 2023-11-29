@@ -10,6 +10,7 @@ function toggleDarkMode() {
     localStorage.setItem('darkMode', isDarkMode);
 
     moonImage.style.display = 'none';
+    sunImage.style.display = 'none';
     sunImage.style.display = 'inline-block';
     if (isDarkMode) {
         sunImage.style.display = 'none';
