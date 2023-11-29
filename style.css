@@ -84,15 +84,6 @@ article:has(ol) {
   .dark-mode {
     background-color: black;
     color: white;
-    h1 {
-      /*width: 100px;
-      height: 100px;*/
-      background-color: var(--color-pink-rgb);
-
-    }
-    article:has(ol) {
-      border: 2px inset grey;
-    }
   }
   /*.alter-css {
     display: grid;
