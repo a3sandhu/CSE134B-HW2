@@ -1,3 +1,5 @@
+
+
 // Function to toggle dark mode
 function toggleDarkMode() {
     const body = document.body;
@@ -7,6 +9,8 @@ function toggleDarkMode() {
     const isDarkMode = body.classList.contains('dark-mode');
     localStorage.setItem('darkMode', isDarkMode);
 
+    moonImage.style.display = 'none';
+    sunImage.style.display = 'inline-block';
     if (isDarkMode) {
         sunImage.style.display = 'none';
         moonImage.style.display = 'inline-block';
