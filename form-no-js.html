@@ -13,7 +13,8 @@
   </head>
   <body>
     <h1>Flexbox</h1>
-    <button onclick="myFunction()">Toggle dark mode</button>
+    <!-- <button onclick="myFunction()">Toggle dark mode</button>-->
+    <!-- input with pattern instead of textarea for no js-->
     <div class="formcontainer">
     <div class="user-invalid">
         <form action="https://httpbin.org/post" method = "POST">
@@ -26,8 +27,10 @@
           <input type=“email” id="email" name="emailaddress" placeholder="email@example.com" required>
       
           <label for="comments">Comments (required)</label>
-          <textarea id="comments" name="comments" placeholder="Additional Comments..." 
-          minlength = "2" maxlength = "150" required></textarea>
+          <input type="text" id="comments" name="Comment" placeholder="Additional Comments..." 
+          pattern="[a-zA-Z0-9]+" maxlength="50" required>
+          
+          
   
           <input type="hidden" id= "bot" name="possible_bot" value = true>
   
