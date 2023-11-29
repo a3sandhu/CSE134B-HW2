@@ -6,6 +6,14 @@ function toggleDarkMode() {
     // Save theme preference to local storage
     const isDarkMode = body.classList.contains('dark-mode');
     localStorage.setItem('darkMode', isDarkMode);
+
+    if (isDarkMode) {
+        sunImage.style.display = 'none';
+        moonImage.style.display = 'inline-block';
+    } else {
+        moonImage.style.display = 'none';
+        sunImage.style.display = 'inline-block';
+    }
 }
 
 // Function to handle the button click event
