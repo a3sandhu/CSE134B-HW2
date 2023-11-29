@@ -1,25 +1,53 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const textArea = document.getElementById('comments');
-    const charCountElement = document.getElementById('char-count');
-    const commentsInfo = document.getElementById('info_m');
+    const textFields = document.querySelectorAll('input[type="text"], input[type="email"], textarea');
 
-    textArea.addEventListener('input', function () {
-        updateCharCount();
-    })
+    textFields.forEach(function (field) {
+        field.addEventListener('keypress', function (event) {
+            const inputValue = event.key;
+            const pattern = [a-zA-Z0-9]; 
+
+            if (!pattern.test(inputValue)) {
+                flashField(field);
+                displayErrorMessage(field);
+                preventIllegalInput(event);
+            } else {
+                hideErrorMessage(field);
+            }
+        });
+    });
+
+    function flashField(field) {
+        field.style.transition = 'background-color 0.3s ease';
+        field.style.backgroundColor = red; 
+        setTimeout(function () {
+            field.style.backgroundColor = '';
+        }, 300);
+    }
+
+    function displayErrorMessage(field) {
+        const errorMessage = document.getElementById('error_m');
+        errorMessage.textContent = 'Illegal character detected';
+        errorMessage.style.display = 'block';
+        setTimeout(function () {
+            errorMessage.style.opacity = '0';
+            setTimeout(function () {
+                errorMessage.style.display = 'none';
+                errorMessage.style.opacity = '1';
+            }, 500);
+        }, 2000);
+    }
+
+    function hideErrorMessage(field) {
+        const errorMessage = document.getElementById('error_m');
+        errorMessage.style.display = 'none';
+        errorMessage.textContent = '';
+    }
+
+    function preventIllegalInput(event) {
+        event.preventDefault();
+        return false;
+    }
 });
-
-function updateCharCount() {
-    const maxCount = 150;
-    const charsLeft = maxCount - textArea.value.length;
-    charCountElement.textContent = charsLeft;
-    // Update style based on remaining characters
-       if (remainingChars > 100) {
-        commentsInfo.classList.remove('error');
-        commentsInfo.classList.add('warn');
-       } else {
-        commentsInfo.classList.remove('warn', 'error');
-       }
-}
 // Function to toggle dark mode
 function toggleDarkMode() {
     const body = document.body;
