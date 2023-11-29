@@ -1,5 +1,25 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const textArea = document.getElementById('comments');
+    const charCountElement = document.getElementById('char-count');
+    const commentsInfo = document.getElementById('info_m');
 
+    textArea.addEventListener('input', function () {
+        updateCharCount();
+    })
+});
 
+function updateCharCount() {
+    const maxCount = 150;
+    const charsLeft = maxCount - textArea.value.length;
+    charCountElement.textContent = charsLeft;
+    // Update style based on remaining characters
+       if (remainingChars > 100) {
+        commentsInfo.classList.remove('error');
+        commentsInfo.classList.add('warn');
+       } else {
+        commentsInfo.classList.remove('warn', 'error');
+       }
+}
 // Function to toggle dark mode
 function toggleDarkMode() {
     const body = document.body;
