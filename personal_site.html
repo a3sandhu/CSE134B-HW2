@@ -29,6 +29,7 @@
         <img src="corvo.webp" width = 250 alt="Profile Picture">
       </picture>
       <h1>Apnambir Sandhu</h1>
+      <button onclick="myFunction()">Toggle dark mode</button>
       <p>
         About Me
       </p>
@@ -236,5 +237,13 @@
       <hr>
       <p>Made with &hearts; by Apnambir Sandhu</p>
     </footer>
+    
+    <script>
+      function myFunction() {
+         var element = document.body;
+         element.classList.toggle("dark-mode");
+      }
+      </script>
+
   </body>
 </html>

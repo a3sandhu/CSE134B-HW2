@@ -11,6 +11,7 @@
   </head>
   <body>
     <h1>Flexbox</h1>
+    <button onclick="myFunction()">Toggle dark mode</button>
     <div class="formcontainer">
     <div class="user-invalid">
         <form action="https://httpbin.org/post" method = "POST">
@@ -36,5 +37,13 @@
         </form>
     </div>
       </div>
+
+      <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
+        
   </body>
 </html>
