@@ -35,7 +35,10 @@
       </picture>
       <h1>Apnambir Sandhu</h1>
       
-      <button onclick="myFunction()">Toggle dark mode</button>
+      <button onclick="myFunction()">Toggle dark mode
+        <img src="sunicon.png" alt="SunIcon" id="sunImage" class="theme-image" />
+        <img src="moonicon.png" alt="MoonIcon" id="moonImage" class="theme-image" />
+      </button>
       <p>
         About Me
       </p>
@@ -217,9 +220,6 @@
     <div class="formcontainer">
       <div class="user-invalid">
           <form action="https://httpbin.org/post" method = "POST">
-
-            <img src="sunicon.png" alt="SunIcon" id="sunImage" class="theme-image" />
-            <img src="moonicon.png" alt="MoonIcon" id="moonImage" class="theme-image" />
         
             <label for="name">Full Name (required)</label>
             <input type="text" id="name" name="fullname" placeholder="Your name.." required>
