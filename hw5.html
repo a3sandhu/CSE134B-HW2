@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Homework 4 Form">
+    <meta name="keywords" content="HTML">
+
+    <link rel="stylesheet" href = style.css />
+    <title>HW5 Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="myscripts.js"></script>
+
+  </head>
+  <body>
+    <rating-widget>
+        <form action="https://httpbin.org/post" method="POST">
+            <label for="rating">How sasisfied are you?</label>
+            <input type="hidden" name="question" value="How sasisfied are you?">
+            <input type="hidden" name="sentBy" value="HTML">
+            <input type="number" id="rating" name="rating" min="1" max="5" value="0" required>
+            <button type="submit">Submit</button>
+        </form>
+    </rating-widget>
+    
+
+  </body>
+</html>
