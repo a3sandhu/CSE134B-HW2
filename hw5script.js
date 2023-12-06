@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    form.addEventListener('submit', function (event) {
+    /*form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
         const formData = new FormData(form);
         const feedbackData = {};
@@ -43,5 +43,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error('Form submission error:', error);
                 // Handle errors here
             });
-    });
+    });*/
 });
