@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         star.addEventListener('click', function () {
             const ratingValue = index + 1;
             ratingInput.value = ratingValue;
+            console.log(ratingValue);
             highlightStars(ratingValue);
         });
     });
