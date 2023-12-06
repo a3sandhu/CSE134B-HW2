@@ -14,9 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function highlightStars(count) {
         stars.forEach((star, index) => {
             if (index < count) {
-                star.style.color = blue;
+                star.style.color = 'blue'; 
+            } else {
+                star.style.color = 'black'; 
             }
-            
         });
     }
 
