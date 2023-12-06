@@ -18,13 +18,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        // You can add additional logic here to handle form submission
-        // For now, let's just log the form data
+        event.preventDefault(); // Prevent the default form submission
         const formData = new FormData(form);
-        for (let entry of formData.entries()) {
-            console.log(entry[0] + ': ' + entry[1]);
-        }
+        const feedbackData = {};
+
+        formData.forEach((value, key) => {
+            feedbackData[key] = value;
+        });
+
+        // You can now use the feedbackData object to handle the form data as needed
+        console.log(feedbackData);
+
+        // For demonstration purposes, I'm using fetch to submit the data to httpbin.org
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Form submission successful:', data);
+                // You can handle the response from the server here
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                // Handle errors here
+            });
     });
 });
