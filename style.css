@@ -86,6 +86,10 @@ article:has(ol) {
     color: white;
   }
 
+  .stars {
+    color: white;
+  }
+
   
   /*.alter-css {
     display: grid;
