@@ -85,10 +85,11 @@ article:has(ol) {
     background-color: black;
     color: white;
   }
-
+  
   .stars {
-    color: white;
+    cursor: pointer;
   }
+  
 
   
   /*.alter-css {
