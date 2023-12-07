@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
     const messageContainer = document.getElementById('message-container');
 
-    const fetch = require('node-fetch');
-    const apiUrl = 'https://api.weather.gov/gridpoints/AKQ/33,117/forecast?units=us';
-
+    
     stars.forEach((star, index) => {
         star.addEventListener('click', function () {
             const ratingValue = index + 1;
