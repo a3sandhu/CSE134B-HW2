@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const stars = document.querySelectorAll('.stars span');
     const ratingInput = document.querySelector('.stars').getAttribute('data-rating');
     const form = document.querySelector('form');
+    const messageContainer = document.getElementById('message-container');
 
     stars.forEach((star, index) => {
         star.addEventListener('click', function () {
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ratingInput.value = ratingValue;
             console.log(ratingValue);
             highlightStars(ratingValue);
+            displayMessage(ratingValue);
         });
     });
 
@@ -20,6 +22,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 star.style.color = 'black'; 
             }
         });
+    }
+
+    function displayMessage(ratingValue) {
+        let message = '';
+
+        if (ratingValue > 3) {
+            message = 'Thanks for the ${ratingValue} star rating';
+        }
+        else {
+            message = 'Thanks for your feed back of ${ratingValue} stars. We will try to do better!';
+        }
+        messageContainer.textContent = message;
     }
 
     /*form.addEventListener('submit', function (event) {
