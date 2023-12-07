@@ -49,7 +49,7 @@ article:has(ol) {
     background-color: red;
     animation-name: color-swap;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 2;
   }
 
   .formcontainer {
