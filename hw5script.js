@@ -75,36 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //https://api.weather.gov/gridpoints/TOP/33,117/forecast
     //curl -X GET "https://api.weather.gov/gridpoints/AKQ/33,117/forecast?units=us" -H "accept: application/geo+json"
-    fetch(apiUrl, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/geo+json',
-        },
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        // Update the HTML content with weather information
-        const weatherContainer = document.getElementById('weather-container');
-        weatherContainer.innerHTML = formatWeatherData(data);
-    })
-    .catch(error => {
-        console.error('Error fetching weather data:', error.message);
-    });
-
-    function formatWeatherData(data) {
-        // Format the weather data as desired
-        const forecast = data.properties.periods.map(period => {
-            return `<p>${period.name}: ${period.temperature}°F - ${period.shortForecast}</p>`;
-        }).join('');
-
-        return forecast;
-    }
-
+    
     /*form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
         const formData = new FormData(form);
