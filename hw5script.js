@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(ratingValue);
             highlightStars(ratingValue);
             displayMessage(ratingValue);
+            sendRatingToEndpoint(ratingValue);
         });
     });
 
@@ -36,6 +37,39 @@ document.addEventListener('DOMContentLoaded', function () {
         messageContainer.textContent = message;
     }
 
+    function sendRatingToEndpoint(ratingValue) {
+        // Replace the URL with the URL of your fake endpoint
+        const endpointUrl = 'https://httpbin.org/post';
+    
+        // Create an object with the data you want to send
+        const data = {
+            question: 'How satisfied are you?',
+            rating: ratingValue,
+        };
+    
+        // Use the Fetch API to send a POST request to the endpoint
+        fetch(endpointUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Sent-By': 'JS', // Custom header
+            },
+            body: JSON.stringify({ ...data, sentBy: 'JS' }), // Add 'sentBy' to the payload
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Rating sent successfully:', data);
+            // You can handle the response from the server here
+    
+            // Log the response to the console
+            console.log('Fake Endpoint Response:', data);
+        })
+        .catch(error => {
+            console.error('Error sending rating:', error);
+            // Handle errors here
+        });
+    }
+    
     /*form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
         const formData = new FormData(form);
