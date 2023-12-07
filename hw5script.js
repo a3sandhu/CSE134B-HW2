@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
         let message = '';
 
         if (ratingValue > 3) {
-            message = 'Thanks for the ${ratingValue} star rating';
+            message = `Thanks for the ${ratingValue} star rating`;
         }
         else {
-            message = 'Thanks for your feed back of ${ratingValue} stars. We will try to do better!';
+            message = `Thanks for your feed back of ${ratingValue} stars. We will try to do better!`;
         }
         messageContainer.textContent = message;
     }
