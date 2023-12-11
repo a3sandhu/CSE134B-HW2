@@ -104,15 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Update the DOM elements with the weather information
             shortForecastElement.textContent = weatherInfo.shortForecast;
-            if (weatherInfo.probabilityOfPrecipitation.value > 24) {
-                weatherIconElement.src = rain-icon.jpg;
-            }
-            else if (weatherInfo.shortForecast.toLowerCase().includes('cloudy')) {
-                weatherIconElement.src = cloudy-icon.png;
-            }
-            else {
-                weatherIconElement.src = sunicon.png;
-            }
+            weatherIconElement.src = sunicon.png;
             
             temperatureElement.textContent = `The temperature is ${weatherInfo.temperature} \u00B0 ${weatherInfo.temperatureUnit}`;
             //temperatureUnitElement.textContent = weatherInfo.temperatureUnit;
