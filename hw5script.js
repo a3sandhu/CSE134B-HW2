@@ -103,7 +103,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const chanceOfRainElement = document.getElementById('chance-of-rain');
 
             // Update the DOM elements with the weather information
-            weatherIconElement.src = 'sunicon.png';
+            if (weatherInfo.probabilityOfPrecipitation.value > 24) {
+                weatherIconElement.src = 'rain-icon.jpg'; 
+            } else if (weatherInfo.shortForecast.toLowerCase().includes('cloudy')) {
+                weatherIconElement.src = 'cloudy-icon.png'; 
+            } else {
+                weatherIconElement.src = 'sunicon.png'; 
+            }
             shortForecastElement.textContent = weatherInfo.shortForecast;
             temperatureElement.textContent = `The temperature is ${weatherInfo.temperature} \u00B0 ${weatherInfo.temperatureUnit}`;
             //temperatureUnitElement.textContent = weatherInfo.temperatureUnit;
@@ -113,9 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
             windDirectionElement.textContent = `The wind direction is ${weatherInfo.windDirection}`;
             chanceOfRainElement.textContent = `The Chance of Rain is ${weatherInfo.probabilityOfPrecipitation.value}%`;
             
-
-            // You can similarly update other DOM elements with additional information
-            // For example, dewpoint, probabilityOfPrecipitation, etc.
         })
         .catch(error => {
             console.error('Error fetching data:', error);
