@@ -115,9 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error fetching data:', error);
         });
     }
-    document.addEventListener('DOMContentLoaded', function() {
-        getWeather();
-    });
 
 
 
