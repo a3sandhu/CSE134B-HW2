@@ -103,9 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const chanceOfRainElement = document.getElementById('chance-of-rain');
 
             // Update the DOM elements with the weather information
+            weatherIconElement.src = weatherInfo.icon;
             shortForecastElement.textContent = weatherInfo.shortForecast;
-            weatherIconElement.src = sunicon.png;
-            
             temperatureElement.textContent = `The temperature is ${weatherInfo.temperature} \u00B0 ${weatherInfo.temperatureUnit}`;
             //temperatureUnitElement.textContent = weatherInfo.temperatureUnit;
             relativeHumidityElement.textContent = `The Humidity is ${weatherInfo.relativeHumidity.value}%`;
