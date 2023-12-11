@@ -42,7 +42,21 @@
 
     </rating-widget>
     <h2>Weather Data</h2>
-    <div id="weather-container"></div>
+    <div id="weather-container">
+      <img id="weather-icon" alt="Weather Icon" width="25" height="25">
+      <p id="temperature"></p>
+      <p id="temperature-unit"></p>
+      <p id="relative-humidity"></p>
+      <p id="wind-speed"></p>
+      <p id="wind-direction"></p>
+      <p id="short-forecast"></p>
+      <script>
+        // Call the getWeather function when the page is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+          getWeather();
+        });
+      </script>
+    </div>
 
   </body>
 </html>

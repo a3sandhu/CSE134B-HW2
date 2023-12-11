@@ -4,9 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
     const messageContainer = document.getElementById('message-container');
 
+    //const fetch = require('node-fetch');
+    //const apiUrl = 'https://api.weather.gov/gridpoints/SGX/54,20/forecast/hourly?units=us';
+
     
     stars.forEach((star, index) => {
-        star.addEventListener('click', function () {
+        //star.addEventListener('click', function () {
+        star.addEventListener('mouseover', function () {
             const ratingValue = index + 1;
             ratingInput.value = ratingValue;
             console.log(ratingValue);
@@ -39,10 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function sendRatingToEndpoint(ratingValue) {
-        // Replace the URL with the URL of your fake endpoint
         const endpointUrl = 'https://httpbin.org/post';
     
-        // Create an object with the data you want to send
         const data = {
             question: 'How satisfied are you?',
             rating: ratingValue,
@@ -57,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             body: JSON.stringify({ ...data, sentBy: 'JS' }), // Add 'sentBy' to the payload
         })
+        //use .then to modify DOM API
         .then(response => response.json())
         .then(data => {
             console.log('Rating sent successfully:', data);
@@ -71,8 +74,60 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    //https://api.weather.gov/gridpoints/TOP/33,117/forecast
-    //curl -X GET "https://api.weather.gov/gridpoints/AKQ/33,117/forecast?units=us" -H "accept: application/geo+json"
+    async function getWeather() {
+        const apiUrl = 'https://api.weather.gov/gridpoints/SGX/54,20/forecast/hourly?units=us';
+
+        fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+            throw new Error(`Network response was not ok: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Assuming the structure of the data includes an array of hourly forecasts
+            const hourlyForecasts = data.properties.periods;
+
+            // Access the DOM elements where you want to display the weather information
+            const weatherIconElement = document.getElementById('weather-icon');
+            const temperatureElement = document.getElementById('temperature');
+            const temperatureUnitElement = document.getElementById('temperature-unit');
+            const relativeHumidityElement = document.getElementById('relative-humidity');
+            const windSpeedElement = document.getElementById('wind-speed');
+            const windDirectionElement = document.getElementById('wind-direction');
+            const shortForecastElement = document.getElementById('short-forecast');
+
+            // Assuming you want to display information for the first hourly forecast
+            const firstHourlyForecast = hourlyForecasts[0];
+
+            // Update the DOM elements with the weather information
+            weatherIconElement.src = firstHourlyForecast.icon;
+            temperatureElement.textContent = `${firstHourlyForecast.temperature}`;
+            temperatureUnitElement.textContent = firstHourlyForecast.temperatureUnit;
+            relativeHumidityElement.textContent = `${firstHourlyForecast.relativeHumidity}%`;
+            windSpeedElement.textContent = firstHourlyForecast.windSpeed;
+            windDirectionElement.textContent = firstHourlyForecast.windDirection;
+            shortForecastElement.textContent = firstHourlyForecast.shortForecast;
+
+            // You can similarly update other DOM elements with additional information
+            // For example, dewpoint, probabilityOfPrecipitation, etc.
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+
+
+    }
+
+
+
+
+
+
+
+
+
+
     
     /*form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
