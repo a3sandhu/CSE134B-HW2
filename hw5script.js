@@ -103,12 +103,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Update the DOM elements with the weather information
             weatherIconElement.src = weatherInfo.icon;
-            temperatureElement.textContent = `The temp is ${weatherInfo.temperature} ${weatherInfo.temperatureUnit}`;
+            shortForecastElement.textContent = weatherInfo.shortForecast;
+            temperatureElement.textContent = `The temperature is ${weatherInfo.temperature} ${weatherInfo.temperatureUnit}`;
             //temperatureUnitElement.textContent = weatherInfo.temperatureUnit;
-            relativeHumidityElement.textContent = `${weatherInfo.relativeHumidity.value}%`;
+            relativeHumidityElement.textContent = `The relativeHumidity is ${weatherInfo.relativeHumidity.value}%`;
             windSpeedElement.textContent = weatherInfo.windSpeed;
             windDirectionElement.textContent = weatherInfo.windDirection;
-            shortForecastElement.textContent = weatherInfo.shortForecast;
+            
 
             // You can similarly update other DOM elements with additional information
             // For example, dewpoint, probabilityOfPrecipitation, etc.
