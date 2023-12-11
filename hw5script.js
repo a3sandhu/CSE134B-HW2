@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Access the DOM elements where you want to display the weather information
             const weatherIconElement = document.getElementById('weather-icon');
             const temperatureElement = document.getElementById('temperature');
-            const temperatureUnitElement = document.getElementById('temperature-unit');
+            //const temperatureUnitElement = document.getElementById('temperature-unit');
             const relativeHumidityElement = document.getElementById('relative-humidity');
             const windSpeedElement = document.getElementById('wind-speed');
             const windDirectionElement = document.getElementById('wind-direction');
@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Update the DOM elements with the weather information
             weatherIconElement.src = weatherInfo.icon;
-            temperatureElement.textContent = `${weatherInfo.temperature} ${weatherInfo.temperatureUnit}`;
-            temperatureUnitElement.textContent = weatherInfo.temperatureUnit;
+            temperatureElement.textContent = `The temp is ${weatherInfo.temperature} ${weatherInfo.temperatureUnit}`;
+            //temperatureUnitElement.textContent = weatherInfo.temperatureUnit;
             relativeHumidityElement.textContent = `${weatherInfo.relativeHumidity}%`;
             windSpeedElement.textContent = weatherInfo.windSpeed;
             windDirectionElement.textContent = weatherInfo.windDirection;
