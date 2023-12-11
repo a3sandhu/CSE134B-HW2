@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //const fetch = require('node-fetch');
     //const apiUrl = 'https://api.weather.gov/gridpoints/SGX/54,20/forecast/hourly?units=us';
 
-    
+    getWeather();
     stars.forEach((star, index) => {
         //star.addEventListener('click', function () {
         star.addEventListener('mouseover', function () {
