@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(data => {
             // Assuming the structure of the data includes an array of hourly forecasts
-            const hourlyForecasts = data.properties.periods;
+            const weatherInfo = data.properties.periods[0];
 
             // Access the DOM elements where you want to display the weather information
             const weatherIconElement = document.getElementById('weather-icon');
@@ -97,17 +97,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const windDirectionElement = document.getElementById('wind-direction');
             const shortForecastElement = document.getElementById('short-forecast');
 
-            // Assuming you want to display information for the first hourly forecast
-            const firstHourlyForecast = hourlyForecasts[0];
-
             // Update the DOM elements with the weather information
-            weatherIconElement.src = firstHourlyForecast.icon;
-            temperatureElement.textContent = `${firstHourlyForecast.temperature}`;
-            temperatureUnitElement.textContent = firstHourlyForecast.temperatureUnit;
-            relativeHumidityElement.textContent = `${firstHourlyForecast.relativeHumidity}%`;
-            windSpeedElement.textContent = firstHourlyForecast.windSpeed;
-            windDirectionElement.textContent = firstHourlyForecast.windDirection;
-            shortForecastElement.textContent = firstHourlyForecast.shortForecast;
+            weatherIconElement.src = weatherInfo.icon;
+            temperatureElement.textContent = `${weatherInfo.temperature}`;
+            temperatureUnitElement.textContent = weatherInfo.temperatureUnit;
+            relativeHumidityElement.textContent = `${weatherInfo.relativeHumidity}%`;
+            windSpeedElement.textContent = weatherInfo.windSpeed;
+            windDirectionElement.textContent = weatherInfo.windDirection;
+            shortForecastElement.textContent = weatherInfo.shortForecast;
 
             // You can similarly update other DOM elements with additional information
             // For example, dewpoint, probabilityOfPrecipitation, etc.
