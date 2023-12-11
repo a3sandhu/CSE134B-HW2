@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         fetch(apiUrl)
         .then(response => {
+            console.log("Fetching URL");
             if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.statusText}`);
             }
