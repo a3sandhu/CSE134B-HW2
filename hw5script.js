@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     async function getWeather() {
+        console.log("getWeather()");
         const apiUrl = 'https://api.weather.gov/gridpoints/SGX/54,20/forecast/hourly?units=us';
 
         fetch(apiUrl)
