@@ -13,34 +13,38 @@
   <body>
     <h1>Rating Widget</h1>
     <rating-widget>
-        <form action="https://httpbin.org/post" method="POST">
-            <label>How sasisfied are you?</label>
-            <input type="hidden" name="question" value="How sasisfied are you?">
-            <input type="hidden" name="sentBy" value="HTML">
-            <!--<input type="number" id="rating" name="rating" min="1" max="5" value="0" required>-->
-            <div class="stars" data-rating="0">
-                <span>&#9733;</span>
-                <span>&#9733;</span>
-                <span>&#9733;</span>
-                <span>&#9733;</span>
-                <span>&#9733;</span>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-        <output id="message-container"></output>
-
-        <noscript>
-            <p>JavaScript is disabled. Here is an alternate rating submission</p>
-            <form action="https://httpbin.org/post" method="POST">
-                <label for="rating">How sasisfied are you?</label>
-                <input type="hidden" name="question" value="How sasisfied are you?">
-                <input type="hidden" name="sentBy" value="HTML">
-                <input type="number" id="rating" name="rating" min="1" max="5" value="0" required>
-                <button type="submit">Submit</button>
-            </form>
-        </noscript>
-
-    </rating-widget>
+      <form action="https://httpbin.org/post" method="POST">
+          <!-- Updated the "for" attribute to match the "id" of the input -->
+          <label for="rating">How satisfied are you?</label>
+          <input type="hidden" name="question" value="How satisfied are you">
+          <input type="hidden" name="sentBy" value="HTML">
+          <!-- Added an "id" attribute to the input -->
+          <input type="number" id="rating" name="rating" min="1" max="5" value="0" required>
+          <div class="stars" data-rating="0">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+          </div>
+          <button type="submit">Submit</button>
+      </form>
+      <output id="message-container"></output>
+  
+      <noscript>
+          <p>JavaScript is disabled. Here is an alternate rating submission</p>
+          <form action="https://httpbin.org/post" method="POST">
+              <!-- Updated the "for" attribute to match the "id" of the input -->
+              <label for="rating-noscript">How satisfied are you?</label>
+              <input type="hidden" name="question" value="How satisfied are you">
+              <input type="hidden" name="sentBy" value="HTML">
+              <!-- Added an "id" attribute to the input -->
+              <input type="number" id="rating-noscript" name="rating" min="1" max="5" value="0" required>
+              <button type="submit">Submit</button>
+          </form>
+      </noscript>
+  </rating-widget>
+  
     <h2>Weather Data</h2>
     <div id="weather-container">
       <img id="weather-icon" alt="Weather Icon" width="25" height="25">
