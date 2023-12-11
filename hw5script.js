@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             // Assuming the structure of the data includes an array of hourly forecasts
             const weatherInfo = data.properties.periods[0];
+            console.log(data);
+            console.log(weatherInfo);
 
             // Access the DOM elements where you want to display the weather information
             const weatherIconElement = document.getElementById('weather-icon');
