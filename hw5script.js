@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Update the DOM elements with the weather information
             weatherIconElement.src = weatherInfo.icon;
             shortForecastElement.textContent = weatherInfo.shortForecast;
-            temperatureElement.textContent = `The temperature is ${weatherInfo.temperature} ${weatherInfo.temperatureUnit}`;
+            temperatureElement.textContent = `The temperature is ${weatherInfo.temperature} \u00B0 ${weatherInfo.temperatureUnit}`;
             //temperatureUnitElement.textContent = weatherInfo.temperatureUnit;
             relativeHumidityElement.textContent = `The relativeHumidity is ${weatherInfo.relativeHumidity.value}%`;
             windSpeedElement.textContent = weatherInfo.windSpeed;
